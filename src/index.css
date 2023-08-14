@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .nav-item {
+    @apply hover:text-softRed cursor-pointer;
+  }
+}
+
 #root {
   padding: 0;
   max-width: 100%;

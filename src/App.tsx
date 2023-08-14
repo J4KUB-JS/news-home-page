@@ -21,11 +21,11 @@ function App() {
             <img src={logo} />
           </div>
           <ul className="md:flex gap-6 text-lg text-veryDargBlue tracking-wide hidden">
-            <li className="hover:text-softRed cursor-pointer">Home</li>
-            <li className="hover:text-softRed cursor-pointer">News</li>
-            <li className="hover:text-softRed cursor-pointer">Popular</li>
-            <li className="hover:text-softRed cursor-pointer">Trending</li>
-            <li className="hover:text-softRed cursor-pointer">Categories</li>
+            <li className="nav-item">Home</li>
+            <li className="nav-item">News</li>
+            <li className="nav-item">Popular</li>
+            <li className="nav-item">Trending</li>
+            <li className="nav-item">Categories</li>
           </ul>
           {!isMenuOpen && (
             <img
@@ -35,19 +35,19 @@ function App() {
             />
           )}
           {isMenuOpen ? (
-            <div className="h-[100vh] w-[100vw] bg-transparentBlack block md:hidden absolute top-0 right-0">
+            <div className="h-[100vh] w-[100vw] bg-veryDarkBlue bg-opacity-50 block md:hidden absolute top-0 right-0">
               <div className=" bg-offWhite h-[100vh] w-[50vw] absolute top-0 right-0">
                 <img
                   src={closeIcon}
                   className="block md:hidden cursor-pointer absolute top-12 right-6"
                   onClick={() => setIsMenuOpen(false)}
                 />
-                <ul className="flex flex-col gap-5 text-xl text-veryDargBlue tracking-wide text-left mt-[150px] px-8 font-semibold">
-                  <li className="hover:text-softRed cursor-pointer">Home</li>
-                  <li className="hover:text-softRed cursor-pointer">News</li>
-                  <li className="hover:text-softRed cursor-pointer">Popular</li>
-                  <li className="hover:text-softRed cursor-pointer">Trending</li>
-                  <li className="hover:text-softRed cursor-pointer">Categories</li>
+                <ul className="space-y-5 text-xl text-veryDargBlue tracking-wide text-left mt-[150px] px-8 font-semibold">
+                  <li className="nav-item">Home</li>
+                  <li className="nav-item">News</li>
+                  <li className="nav-item">Popular</li>
+                  <li className="nav-item">Trending</li>
+                  <li className="nav-item">Categories</li>
                 </ul>
               </div>
             </div>
@@ -76,8 +76,10 @@ function App() {
             id="grid-item-2"
             className="text-left bg-veryDarkBlue text-offWhite px-6 py-7"
           >
-            <h3 className="text-softOrange text-5xl font-semibold tracking-wide">New</h3>
-            <div className="divide-y divide-darkGrayishBlue">
+            <h3 className="text-softOrange text-5xl font-semibold tracking-wide mb-5">
+              New
+            </h3>
+            <div className="space-y-7 divide-y divide-darkGrayishBlue">
               <NewCardItem
                 title={"Hydrogen VS Electric Cars"}
                 body={"Will hydrogen-fueled cars ever catch up to EVs?"}

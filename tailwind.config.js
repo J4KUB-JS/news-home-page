@@ -19,7 +19,6 @@ export default {
       veryDarkBlue: "hsl(240, 100%, 5%)",
       softOrange: "hsl(35, 77%, 62%)",
       softRed: "hsl(5, 85%, 63%)",
-      transparentBlack: "rgba(0,0,0,0.5)",
     },
     extend: {},
   },
